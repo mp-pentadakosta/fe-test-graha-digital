@@ -10,7 +10,6 @@ import {
   TableRow,
 } from "@heroui/react";
 import { CardBody, CardFooter, CardHeader } from "@heroui/card";
-import Lottie from "lottie-react";
 import * as React from "react";
 import { Image } from "@heroui/image";
 import log from "loglevel";
@@ -94,9 +93,6 @@ export default function HomeView() {
         <Card
           className={`hidden md:flex max-w-80 xl:max-w-96 md:max-h-56 lg:max-h-60 xl:max-h-96`}
         >
-          <CardBody>
-            <Lottie animationData={dashboardLottie} loop={true} />
-          </CardBody>
         </Card>
         <Card className={`w-full md:max-h-[500px]`}>
           <CardBody>
