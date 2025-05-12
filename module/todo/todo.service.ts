@@ -53,8 +53,11 @@ export const TodoService = () => {
       setPage(page + 1);
       const groupName = resp.result.listData.map((item) => item.groupName);
       const uniqueGroupName = Array.from(new Set(groupName));
+      const uniqPrevGroupName = Array.from(new Set(listGroup));
+      const newGroupName = [...uniqPrevGroupName, ...uniqueGroupName];
+      const uniqueGroupName2 = Array.from(new Set(newGroupName));
 
-      setListGroup((prev) => [...prev, ...uniqueGroupName]);
+      setListGroup(uniqueGroupName2);
     } catch (error: any) {
       Toast.callToastError(error.message);
     } finally {
