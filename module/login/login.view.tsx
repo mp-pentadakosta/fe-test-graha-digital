@@ -3,11 +3,8 @@ import { Input } from "@heroui/input";
 import { Form } from "@heroui/form";
 import * as React from "react";
 import { Button } from "@heroui/button";
-import Lottie from "lottie-react";
 import Image from "next/image";
 import { EyeFilledIcon, EyeSlashFilledIcon } from "@heroui/shared-icons";
-
-import homeLottie from "../../public/lottie/home.json";
 
 import { LoginService } from "@/module/login/login.service";
 
@@ -28,11 +25,6 @@ export default function LoginView() {
           src={"/img/background.jpg"}
         />
       </div>
-      {
-        <div className="hidden lg:flex lg:flex-row basis-3/5">
-          <Lottie animationData={homeLottie} loop={true} />
-        </div>
-      }
       <div className="lg:basis-2/5 w-full content-center pb-36 px-5 lg:px-0">
         <div className={`flex flex-row items-center justify-center`}>
           <Image

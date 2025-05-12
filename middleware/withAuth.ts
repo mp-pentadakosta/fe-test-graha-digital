@@ -14,7 +14,7 @@ export default function withAuth(
     const pathName = req.nextUrl.pathname;
 
     if (pathName === "/") {
-      const homeUrl = new URL("/home", req.url);
+      const homeUrl = new URL("/todo", req.url);
 
       return NextResponse.redirect(homeUrl);
     }
@@ -31,7 +31,7 @@ export default function withAuth(
 
       // If no token found or token is explicitly null
       if (!token || !token.value) {
-        const loginUrl = new URL("/login", req.url);
+        const loginUrl = new URL("/todo", req.url);
 
         loginUrl.searchParams.set("callbackUrl", encodeURI(req.url));
 
